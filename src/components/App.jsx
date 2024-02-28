@@ -62,6 +62,7 @@ const App = () => {
 
         if (newImages.length === 0) {
           toast.warn('Images not found');
+          return;
         }
         if (page === 1) {
           setTotalPages(Math.ceil(totalHits / PER_PAGE));
