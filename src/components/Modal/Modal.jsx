@@ -3,13 +3,7 @@ import { createPortal } from 'react-dom';
 
 import s from './Modal.module.css';
 
-const Modal = ({ image, alt, handleModalClick }) => {
-  const handleCloseModal = e => {
-    if (e.target === e.currentTarget || e.code === 'Escape') {
-      handleModalClick();
-    }
-  };
-
+const Modal = ({ image, alt, handleCloseModal }) => {
   useEffect(() => {
     document.addEventListener('keydown', handleCloseModal);
 

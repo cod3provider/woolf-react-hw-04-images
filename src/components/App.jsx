@@ -68,10 +68,16 @@ const App = () => {
     setIsShowModal(!isShowModal);
   };
 
-  const handleModalClick = (largeImageURL, tags) => {
+  const handleOpenModal = (largeImageURL, tags) => {
     setLargeImageURL(largeImageURL);
     setTags(tags);
     handleToggleModal();
+  };
+
+  const handleCloseModal = e => {
+    if (e.target === e.currentTarget || e.code === 'Escape') {
+      handleToggleModal();
+    }
   };
 
   const isMoreImages = images.length > 0 && page !== totalPages;
@@ -94,7 +100,7 @@ const App = () => {
         />
         <ImageGallery
           images={images}
-          onOpenModal={handleModalClick}
+          onOpenModal={handleOpenModal}
         />
         {isLoading && <Loader />}
         {isMoreImages &&
@@ -105,7 +111,7 @@ const App = () => {
         }
         {isShowModal &&
           <Modal
-            handleModalClick={handleToggleModal}
+            handleCloseModal={handleCloseModal}
             image={largeImageURL}
             alt={tags}
           />
