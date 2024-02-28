@@ -1,15 +1,14 @@
-import { useCallback, useEffect } from 'react';
+import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 
 import s from './Modal.module.css';
 
 const Modal = ({ image, alt, handleModalClick }) => {
-  const handleCloseModal = useCallback(
-    e => {
-      if (e.target === e.currentTarget || e.code === 'Escape') {
-        handleModalClick();
-      }
-    }, [handleModalClick]);
+  const handleCloseModal = e => {
+    if (e.target === e.currentTarget || e.code === 'Escape') {
+      handleModalClick();
+    }
+  };
 
   useEffect(() => {
     document.addEventListener('keydown', handleCloseModal);
