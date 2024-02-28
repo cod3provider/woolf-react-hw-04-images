@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/woolf-react-hw-04-images/static/css/main.9b1983cd.css",
+    "main.js": "/woolf-react-hw-04-images/static/js/main.8897b017.js",
+    "static/media/magnifying-glass.svg": "/woolf-react-hw-04-images/static/media/magnifying-glass.28e983dbe5d5c99e5992f622ad36f994.svg",
+    "index.html": "/woolf-react-hw-04-images/index.html",
+    "main.9b1983cd.css.map": "/woolf-react-hw-04-images/static/css/main.9b1983cd.css.map",
+    "main.8897b017.js.map": "/woolf-react-hw-04-images/static/js/main.8897b017.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9b1983cd.css",
+    "static/js/main.8897b017.js"
+  ]
+}
