@@ -17,7 +17,6 @@ const App = () => {
   const [page, setPage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
   const [isShowModal, setIsShowModal] = useState(false);
-  const [error, setError] = useState(null);
   const [largeImageURL, setLargeImageURL] = useState('');
   const [tags, setTags] = useState('');
   const [totalPages, setTotalPages] = useState(0);
@@ -51,7 +50,6 @@ const App = () => {
         setImages(prevImages => [...prevImages, ...newImages]);
       }
       catch (err) {
-        setError(err.message);
         toast.error('Something went wrong.');
       }
       finally {
