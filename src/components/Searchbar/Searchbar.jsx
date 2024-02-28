@@ -6,6 +6,7 @@ import s from './Searchbar.module.css';
 
 const Searchbar = ({ onSubmit }) => {
   const [query, setQuery] = useState('');
+  const [previousQuery, setPreviousQuery] = useState('');
 
   const handleChange = e => {
     const { value } = e.target;
@@ -14,7 +15,14 @@ const Searchbar = ({ onSubmit }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
+
+    if (previousQuery === query) {
+      alert('try')
+      return
+    }
+
     onSubmit(query);
+    setPreviousQuery(query);
   };
 
   return (
