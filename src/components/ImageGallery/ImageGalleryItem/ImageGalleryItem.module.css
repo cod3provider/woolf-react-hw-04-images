@@ -1,0 +1,15 @@
+.image {
+  object-fit: cover;
+  height: 100%;
+}
+
+.item {
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: scale 250ms linear;
+
+  &:hover {
+    scale: 1.05;
+  }
+}
