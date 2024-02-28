@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import icon from '../../images/icons/magnifying-glass.svg';
 
@@ -17,8 +19,8 @@ const Searchbar = ({ onSubmit }) => {
     e.preventDefault();
 
     if (previousQuery === query) {
-      alert('try')
-      return
+      toast.warn('Enter a new query');
+      return;
     }
 
     onSubmit(query);
