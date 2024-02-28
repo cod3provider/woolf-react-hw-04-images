@@ -21,31 +21,12 @@ const App = () => {
   const [largeImageURL, setLargeImageURL] = useState('');
   const [tags, setTags] = useState('');
   const [totalPages, setTotalPages] = useState(0);
-  console.log(query);
-
-  // state = {
-  //   images: [],
-  //   query: '',
-  //   page: 1,
-  //   isLoading: false,
-  //   error: null,
-  //   largeImageURL: '',
-  //   tags: '',
-  // };
-
-  // componentDidUpdate(prevProps, prevState) {
-  //   const { page, query } = this.state;
-  // }
 
   const searchImages = query => {
     setQuery(query);
     setImages([]);
     setPage(1);
     setIsShowModal(false);
-    // query,
-    // images: [],
-    // page: 1,
-    // isShowModal: false,
   };
 
   useEffect(() => {
@@ -95,9 +76,6 @@ const App = () => {
     handleToggleModal();
   };
 
-  // const { searchImages, handleLoadMore, handleModalClick, handleToggleModal } = this;
-  // const { images, page, totalPages, isShowModal, largeImageURL, tags, isLoading } = this.state;
-
   const isMoreImages = images.length > 0 && page !== totalPages;
 
   return (
@@ -138,6 +116,5 @@ const App = () => {
     </>
   );
 };
-
 
 export default App;
